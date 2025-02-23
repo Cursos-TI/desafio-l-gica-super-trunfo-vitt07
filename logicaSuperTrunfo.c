@@ -5,7 +5,7 @@ int main (){
 //dados das cartas.
 char (estado) [20];
 char (codigo) [20];
-char (nomedacidade) [100];
+char (nomedacidade) [50];
 int populacao;
 float areakm;
 float pib;
@@ -14,7 +14,7 @@ int pontosturisticos;
 //dados das cartas numero 2.
 char (estado2) [20];
 char (codigo2) [20];
-char (nomedacidade2) [100] ;
+char (nomedacidade2) [50];
 int populacao2;
 float areakm2;
 float pib2;
@@ -42,7 +42,7 @@ printf("Entre com a PIB: \n");
 scanf("%f", &pib);
 
 printf("Entre com os Numeros dos Pontos Turisticos: \n");
-scanf("%f", &pontosturisticos);
+scanf("%d", &pontosturisticos);
 
 //inserir dados das cartas numero 2.
 printf("\n\n*****Insira os dados da carta numero 2:***** \n");
@@ -74,8 +74,8 @@ printf("\n\ncarta 1:\n");
 printf("Estado: %s\n", estado);
 printf("Código: %s\n", codigo);
 printf("Nome da cidade: %s\n", nomedacidade);
-printf("Área: %fkm²\n", areakm);
-printf("PIB: %f\n", pib);
+printf("Área: %.2fkm²\n", areakm);
+printf("PIB: %.2f\n", pib);
 printf("Número de Pontos Turísticos: %d\n", pontosturisticos);
 
 // carta 2.
@@ -83,8 +83,8 @@ printf("\ncarta 2:\n");
 printf("Estado: %s\n", estado2);
 printf("Código: %s\n", codigo2);
 printf("Nome da cidade: %s\n", nomedacidade2);
-printf("Área: %fkm²\n", areakm2);
-printf("PIB: %f\n", pib2);
+printf("Área: %.2fkm²\n", areakm2);
+printf("PIB: %.2f\n", pib2);
 printf("Número de Pontos Turísticos: %d\n", pontosturisticos2);
 
 
