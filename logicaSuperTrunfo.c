@@ -2,91 +2,93 @@
 
 int main (){
 
-//dados das cartas.
-char (estado) [20];
-char (codigo) [20];
-char (nomedacidade) [50];
+//dados da carta 1.
 int populacao;
-float areakm;
+float area;
 float pib;
 int pontosturisticos;
+char nome [100];
+char estado [100];
+char codigo [20];
 
-//dados das cartas numero 2.
-char (estado2) [20];
-char (codigo2) [20];
-char (nomedacidade2) [50];
+//dados da carta 2.
 int populacao2;
-float areakm2;
+float area2;
 float pib2;
 int pontosturisticos2;
+char nome2 [100];
+char estado2 [100];
+char codigo2 [20];
 
 //inserir dados das cartas numero 1.
-printf("*****Insira os dados da carta numero 1:***** \n");
+printf("*****Carta numero 1:***** \n");
 
-printf("Entre com o estado: \n");
+printf("Entre com o Estado: \n");
 scanf("%s", &estado);
 
 printf("Entre com o nome da cidade: \n");
-scanf("%s", &nomedacidade);
+scanf("%s", &nome);
 
-printf("Entre com o codigo: \n");
+printf("Entre com a Código: \n");
 scanf("%s", &codigo);
 
 printf("Entre com a População: \n");
 scanf("%d", &populacao);
 
 printf("Entre com a Área: \n");
-scanf("%f", &areakm);
+scanf("%f", &area);
 
 printf("Entre com a PIB: \n");
 scanf("%f", &pib);
 
-printf("Entre com os Numeros dos Pontos Turisticos: \n");
+printf("Entre com os Pontos Turisticos:\n");
 scanf("%d", &pontosturisticos);
 
-//inserir dados das cartas numero 2.
-printf("\n\n*****Insira os dados da carta numero 2:***** \n");
 
-printf("Entre com o estado: \n");
+//inserir dados das cartas numero 2.
+printf("*****Carta numero 2:***** \n");
+
+printf("Entre com o Estado: \n");
 scanf("%s", &estado2);
 
 printf("Entre com o nome da cidade: \n");
-scanf("%s", &nomedacidade2);
+scanf("%s", &nome2);
 
-printf("Entre com o codigo: \n");
-scanf("%s", &codigo);
+printf("Entre com a Código: \n");
+scanf("%s", &codigo2);
 
 printf("Entre com a População: \n");
 scanf("%d", &populacao2);
 
 printf("Entre com a Área: \n");
-scanf("%f", &areakm2);
+scanf("%f", &area2);
 
 printf("Entre com a PIB: \n");
 scanf("%f", &pib2);
 
-printf("Entre com os Numeros dos Pontos Turisticos: \n");
+printf("Entre com os Pontos Turisticos:\n");
 scanf("%d", &pontosturisticos2);
 
-//Imprimindo os dados das cartas
-// carta 1.
-printf("\n\ncarta 1:\n");
-printf("Estado: %s\n", estado);
-printf("Código: %s\n", codigo);
-printf("Nome da cidade: %s\n", nomedacidade);
-printf("Área: %.2fkm²\n", areakm);
-printf("PIB: %.2f\n", pib);
-printf("Número de Pontos Turísticos: %d\n", pontosturisticos);
 
-// carta 2.
-printf("\ncarta 2:\n");
-printf("Estado: %s\n", estado2);
-printf("Código: %s\n", codigo2);
-printf("Nome da cidade: %s\n", nomedacidade2);
-printf("Área: %.2fkm²\n", areakm2);
-printf("PIB: %.2f\n", pib2);
-printf("Número de Pontos Turísticos: %d\n", pontosturisticos2);
+//calculos da Densidade populacional e PIB per Capital carta 1.
+double DensidadePopulacional = (double) populacao / area;
+double DensidadePopulacional2 = (double) populacao2 / area2;
 
+//calculos da Densidade populacional e PIB per Capitalcarta 2.
+double pibpercapital = (double) pib / populacao;
+double pibpercapital2 = (double) pib2 / populacao2;
+
+//Comparando um atributo escolhido: População.
+printf("Comparação por População!\n\n");
+printf("Carta 1: %s (%s): %d\n", nome, estado, populacao);
+printf("Carta 2: %s (%s): %d\n", nome2, estado2, populacao2);
+
+if (populacao >= populacao2)
+{
+   printf("\n**Resultado: Carta 1 (%s) Venceu!**\n", nome);
+}else{
+    printf("\n**Resultado: Carta 2 (%s) Venceu!**\n", nome2);
+}
 
 
 return 0;
